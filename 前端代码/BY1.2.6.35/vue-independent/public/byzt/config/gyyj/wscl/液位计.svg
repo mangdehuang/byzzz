@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112" height="224" viewBox="0 0 112 224" version="1.1">
+    <title>液位计</title>
+    <defs>
+        <linearGradient x1="50.0461681%" y1="100%" x2="50.0461681%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#2C2C2C" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#2C2C2C" stop-opacity="0.1" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="液位计" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#E2E2E2" fill-rule="nonzero" x="46.9763609" y="129.383359" width="17.5371937" height="84.1558592"/>
+        <path d="M46.9763609,213.523025 L64.5135545,213.523025 L64.5135545,217.522735 C64.5135545,221.10003 61.6135844,224 58.03629,224 L53.4536254,224 C49.876331,224 46.9763609,221.10003 46.9763609,217.522735 L46.9763609,213.474445 L46.9763609,213.523025 Z" id="路径" fill="#2791FD" fill-rule="nonzero"/>
+        <path d="M41.7297766,115.343888 L69.776332,115.343888 L69.776332,125.44842 C69.776332,127.612684 68.02185,129.367165 65.8575869,129.367165 L45.6485217,129.367165 C44.6092058,129.367165 43.6124577,128.954299 42.8775505,128.219392 C42.1426432,127.484484 41.7297766,126.487736 41.7297766,125.44842 L41.7297766,115.343888 L41.7297766,115.343888 Z" id="路径" fill="#515151" fill-rule="nonzero"/>
+        <path d="M38.2158606,101.32061 L73.2740548,101.32061 L73.2740548,117.513771 C73.2740548,120.196742 71.0990772,122.37172 68.4161064,122.37172 L44.6931251,122.37172 C41.1158307,122.37172 38.2158606,119.47175 38.2158606,115.894455 L38.2158606,101.32061 L38.2158606,101.32061 Z" id="路径" fill="#E2E2E2" fill-rule="nonzero"/>
+        <rect id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" x="46.9763609" y="129.383359" width="17.5371937" height="7.01163883"/>
+        <circle id="椭圆形" fill="#515151" fill-rule="nonzero" cx="55.7530543" cy="55.7530543" r="55.7530543"/>
+        <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="55.7530543" cy="55.7530543" r="49.0814718"/>
+        <circle id="椭圆形" fill="#1284F7" fill-rule="nonzero" cx="55.7530543" cy="55.7530543" r="45.583749"/>
+        <rect id="矩形" fill="#2B2B2B" fill-rule="nonzero" x="27.706499" y="31.2042218" width="56.0931107" height="28.0465553" rx="4"/>
+        <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="55.7530543" cy="83.7996096" r="7.01163883"/>
+        <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="76.7879708" cy="75.0229162" r="7.01163883"/>
+        <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="34.7181378" cy="75.0229162" r="7.01163883"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="33.8113208" y="36.7746693" width="43.3976722" height="1.99175884" rx="0.55"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="33.8113208" y="41.9564809" width="27.60934" height="1.99175884" rx="0.55"/>
+    </g>
+</svg>

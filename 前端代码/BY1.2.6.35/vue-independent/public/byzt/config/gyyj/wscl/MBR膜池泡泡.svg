@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="224" viewBox="0 0 100 224" version="1.1">
+    <title>MBR膜池泡泡</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MBR膜池泡泡" transform="translate(-78.000000, -16.000000)" fill="#E2E2E2" fill-rule="nonzero">
+            <g id="椭圆形" transform="translate(78.307167, 16.000000)">
+                <circle opacity="0.77" cx="60.0136519" cy="215.972696" r="8.02730375"/>
+                <circle opacity="0.54" cx="34.7849829" cy="191.508532" r="14.1433447"/>
+                <circle opacity="0.62" cx="74.5392491" cy="154.812287" r="21.0238908"/>
+                <circle opacity="0.16" cx="41.665529" cy="118.880546" r="10.3208191"/>
+                <circle opacity="0.44" cx="20.2593857" cy="84.4778157" r="20.2593857"/>
+                <circle opacity="0.45" cx="60.0136519" cy="68.4232082" r="9.55631399"/>
+                <circle opacity="0.3" cx="66.894198" cy="32.4914676" r="32.4914676"/>
+                <circle opacity="0.65" cx="40.1365188" cy="141.051195" r="4.96928328"/>
+                <circle opacity="0.79" cx="74.5392491" cy="193.802048" r="4.96928328"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,74 @@
+// 工作台显示规范：仅定义应用控件，画布图元继续读取画面 JSON 中的用户样式。
+:root {
+  --ui-font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ui-font-caption: 12px;
+  --ui-font-body: 14px;
+  --ui-font-section: 16px;
+  --ui-font-title: 18px;
+  --ui-line-caption: 18px;
+  --ui-line-body: 22px;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-6: 24px;
+  --ui-control-height: 32px;
+  --ui-radius: 4px;
+  --ui-text: #263849;
+  --ui-text-secondary: #5b6b7c;
+  --ui-border: #dce4ed;
+  --ui-surface: #fff;
+  --ui-surface-muted: #f5f7fa;
+  --ui-focus: #2476c8;
+
+  // Element Plus 统一映射，含 small 控件；通过变量保持原组件焦点与禁用状态。
+  --el-font-family: var(--ui-font-family);
+  --el-font-size-extra-small: var(--ui-font-caption);
+  --el-font-size-small: var(--ui-font-body);
+  --el-font-size-base: var(--ui-font-body);
+  --el-font-size-medium: var(--ui-font-section);
+  --el-font-size-large: var(--ui-font-title);
+  --el-component-size-small: var(--ui-control-height);
+  --el-component-size: var(--ui-control-height);
+  --el-border-radius-base: var(--ui-radius);
+  --el-text-color-primary: var(--ui-text);
+  --el-text-color-regular: var(--ui-text-secondary);
+  --el-border-color: var(--ui-border);
+}
+
+body { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+
+// 弹层挂载在 body 下，因此公共控件规范在全局维护，不靠页面重复覆盖。
+.el-button { font-weight: 500; }
+.el-button--small { --el-button-size: var(--ui-control-height); padding: 8px 12px; font-size: var(--ui-font-body); }
+.el-input--small, .el-select--small, .el-input-number--small { --el-component-size-small: var(--ui-control-height); font-size: var(--ui-font-body); }
+// 当前 Element Plus 的 small 下拉框内部仍固定 24px/12px，显式对齐公共输入框。
+.el-select--small .el-select__wrapper,
+.el-select-v2--small .el-select-v2__wrapper { min-height: var(--ui-control-height); font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+.el-form-item--small { margin-bottom: var(--ui-space-4); }
+.el-form-item--small .el-form-item__label { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+.el-form--label-top .el-form-item__label { margin-bottom: var(--ui-space-2); }
+.el-tabs__item { font-size: var(--ui-font-body); }
+.el-table--small { font-size: var(--ui-font-body); }
+.el-table--small .el-table__cell { padding-block: var(--ui-space-2); }
+.el-collapse-item__header { font-size: var(--ui-font-body); font-weight: 500; }
+.el-collapse-item__content { font-size: var(--ui-font-body); line-height: var(--ui-line-body); padding-bottom: var(--ui-space-4); }
+.el-dialog { --el-dialog-padding-primary: var(--ui-space-6); max-width: calc(100vw - 32px); border-radius: 8px; }
+.el-dialog__title { font-size: var(--ui-font-title); line-height: 28px; font-weight: 600; }
+.el-dialog__body { max-height: 70dvh; overflow: auto; font-size: var(--ui-font-body); }
+.el-dialog__footer { padding-top: var(--ui-space-4); }
+.el-empty__description p { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+.el-message { max-width: calc(100vw - 32px); }
+.el-message__content { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+
+// 长列表只在所属面板滚动，浏览器和 Element Plus 滚动条保持相近的视觉密度。
+* { scrollbar-width: thin; scrollbar-color: #aab8c7 transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { border-radius: 4px; background: #aab8c7; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-track { background: transparent; }
+button:focus-visible { outline: 2px solid var(--ui-focus); outline-offset: 2px; }
+
+@media (pointer: coarse) {
+  // 触屏扩大工具栏操作区，画布缩放与用户图元尺寸不受影响。
+  .viewer-tools .el-button { min-height: 40px; }
+}

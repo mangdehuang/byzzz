@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224" height="89" viewBox="0 0 224 89" version="1.1">
+    <title>污水搅拌机主体</title>
+    <g id="污水搅拌机主体" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#989898" fill-rule="nonzero" transform="translate(61.788392, 84.968235) scale(-1, 1) translate(-61.788392, -84.968235) " x="46.3386665" y="81.105804" width="30.899451" height="7.72486276"/>
+        <path d="M177.650823,27.0317647 L224,27.0317647 L224,57.9312157 L177.650823,57.9312157 C169.118176,57.9312157 162.201098,51.014138 162.201098,42.4814902 L162.201098,42.4814902 C162.201098,33.9488424 169.118176,27.0317647 177.650823,27.0317647 L177.650823,27.0317647 Z" id="路径" fill="#E2E2E2" fill-rule="nonzero" transform="translate(193.100549, 42.481490) scale(-1, 1) translate(-193.100549, -42.481490) "/>
+        <rect id="矩形" fill="#383838" fill-rule="nonzero" transform="translate(142.894196, 42.476235) scale(-1, 1) translate(-142.894196, -42.476235) " x="135.169333" y="30.888941" width="15.4497255" height="23.1745883"/>
+        <rect id="矩形" fill="#E2E2E2" fill-rule="nonzero" transform="translate(61.793647, 42.481490) scale(-1, 1) translate(-61.793647, -42.481490) " x="6.89226454e-13" y="3.85717637" width="123.587294" height="77.2486276"/>
+        <rect id="矩形" fill="#BCBCBC" fill-rule="nonzero" transform="translate(23.169333, 42.481490) scale(-1, 1) translate(-23.169333, -42.481490) " x="21.2407451" y="3.85717637" width="3.85717637" height="77.2486276"/>
+        <rect id="矩形" fill="#989898" fill-rule="nonzero" transform="translate(129.378314, 42.481490) scale(-1, 1) translate(-129.378314, -42.481490) " x="123.587294" y="0" width="11.5820391" height="84.9629803" rx="1"/>
+        <rect id="矩形" fill="#989898" fill-rule="nonzero" transform="translate(156.420588, 42.481490) scale(-1, 1) translate(-156.420588, -42.481490) " x="150.629569" y="19.3069019" width="11.5820391" height="46.3491766" rx="1"/>
+    </g>
+</svg>

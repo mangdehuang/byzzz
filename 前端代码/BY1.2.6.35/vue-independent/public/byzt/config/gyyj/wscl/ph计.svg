@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="224" viewBox="0 0 110 224" version="1.1">
+    <title>ph计</title>
+    <defs>
+        <linearGradient x1="49.9538319%" y1="100%" x2="49.9538319%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#2C2C2C" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#2C2C2C" stop-opacity="0.1" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ph计" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M46.5450379,128.151224 L63.9152227,128.151224 L63.9152227,216.525848 C63.9152227,220.653708 60.5689311,224 56.4410712,224 L54.0352284,224 C49.9073685,224 46.5610769,220.653708 46.5610769,216.525848 L46.5610769,128.151224 L46.5450379,128.151224 Z" id="路径" fill="#E2E2E2" fill-rule="nonzero"/>
+        <path d="M41.3323786,114.245453 L69.143921,114.245453 L69.143921,124.253759 C69.143921,126.397412 67.4061472,128.135185 65.2624946,128.135185 L45.213805,128.135185 C43.0701524,128.135185 41.3323786,126.397412 41.3323786,124.253759 L41.3323786,114.245453 L41.3323786,114.245453 Z" id="路径" fill="#515151" fill-rule="nonzero"/>
+        <path d="M37.8679651,100.355721 L72.5922956,100.355721 L72.5922956,116.394673 C72.5922956,119.052093 70.4380306,121.206358 67.7806101,121.206358 L44.2835458,121.206358 C40.7403184,121.206358 37.8679651,118.334005 37.8679651,114.790778 L37.8679651,100.355721 Z" id="路径" fill="#E2E2E2" fill-rule="nonzero"/>
+        <rect id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" x="46.5450379" y="128.151224" width="17.3701847" height="6.9448661"/>
+        <circle id="椭圆形" fill="#515151" fill-rule="nonzero" cx="55.2221108" cy="55.2221108" r="55.2221108"/>
+        <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="55.2221108" cy="55.2221108" r="48.6140627"/>
+        <circle id="椭圆形" fill="#1284F7" fill-rule="nonzero" cx="55.2221108" cy="55.2221108" r="45.1496491"/>
+        <rect id="矩形" fill="#2B2B2B" fill-rule="nonzero" x="27.4426464" y="41.3163397" width="55.5589288" height="27.7794644" rx="4"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="33.5053702" y="46.8337391" width="42.9843907" height="1.97279106" rx="0.55"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="33.5053702" y="51.9822426" width="27.3464127" height="1.97279106" rx="0.55"/>
+    </g>
+</svg>

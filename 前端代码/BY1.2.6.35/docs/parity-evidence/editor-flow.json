@@ -1,0 +1,16 @@
+{
+  "addedAndReopened": 100,
+  "editedAndPersisted": 100,
+  "uniqueIDs": 100,
+  "copyUndoRedoReload": true,
+  "textAndPaddingPersisted": true,
+  "copyEditedIndependently": true,
+  "sceneIDs": [
+    "247f44e73ff2521aadbc3d015ee258d5",
+    "8c5f33bf35100e33f3b7bde8491c86b1"
+  ],
+  "scope": "isolated temporary database; all 100 X coordinates edited in browser, not all properties",
+  "originalEditorReopenedNewScene": true,
+  "chartVariantsBrowserCompared": 15,
+  "chartPreviewErrors": 0
+}

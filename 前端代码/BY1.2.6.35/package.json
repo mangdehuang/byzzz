@@ -1,0 +1,34 @@
+{
+  "name": "byzt-frontend",
+  "version": "1.2.6",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "node --test vue-independent/tests/*.test.mjs",
+    "verify:standalone": "node scripts/verify-standalone.mjs",
+    "dev:independent": "vite --config vite.independent.config.js",
+    "build:independent": "vite build --config vite.independent.config.js",
+    "test:independent": "node --test vue-independent/tests/*.test.mjs"
+  },
+  "dependencies": {
+    "echarts": "^5.6.0",
+    "echarts-liquidfill": "^3.1.0",
+    "element-plus": "^2.14.0",
+    "ezuikit-js": "^9.0.26",
+    "gifuct-js": "^2.1.2",
+    "hls.js": "^1.7.4",
+    "jsep": "^1.6.0",
+    "json5": "^2.2.3",
+    "konva": "^10.9.1",
+    "mqtt": "^5.16.1",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "less": "^4.2.0",
+    "sirv": "^3.0.0",
+    "vite": "^7.3.0"
+  }
+}

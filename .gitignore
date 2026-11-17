@@ -1,0 +1,11 @@
+**/node_modules/
+**/dist-independent/
+**/dist/
+**/release/
+**/.env
+**/.env.*
+!**/.env.example
+**/.DS_Store
+**/._*
+后端代码Go/data/
+后端代码Go/byzt-go

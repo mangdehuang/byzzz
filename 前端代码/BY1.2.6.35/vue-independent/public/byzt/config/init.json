@@ -1,0 +1,175 @@
+{
+  "fontText": [
+    "Arial",
+    "仿宋_GB2312",
+    "华文宋体",
+    "华文彩云",
+    "华文新魏",
+    "华文楷体",
+    "华文琥珀",
+    "华文细黑",
+    "华文行楷",
+    "华文隶书",
+    "幼圆",
+    "微软简隶书",
+    "楷体_GB2312",
+    "黑体"
+  ],
+  "fontNum": [
+    "数字1234567890-1",
+    "数字1234567890-2",
+    "数字1234567890-3",
+    "数字1234567890-4",
+    "数字1234567890-5",
+    "数字1234567890-6",
+    "数字1234567890-7",
+    "数字1234567890-8",
+    "数字1234567890-9",
+    "数字1234567890-10",
+    "数字1234567890-11",
+    "数字1234567890-12"
+  ],
+  "fontSize": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36"
+  ],
+  "stageResolution": [
+    {
+      "name": "1920*1080(电脑)",
+      "value": "1920*1080"
+    },
+    {
+      "name": "1440*900(8:5)",
+      "value": "1440*900"
+    },
+    {
+      "name": "1024*768(4:3)",
+      "value": "1024*768"
+    },
+    {
+      "name": "1200*2200(手机竖屏)",
+      "value": "1200*2200"
+    },
+    {
+      "name": "1260*800(电脑-手机横屏)",
+      "value": "1260*800"
+    }
+  ],
+  "dateFormat": [
+    {
+      "name": "2021-06-18",
+      "value": "YYYY-mm-dd"
+    },
+    {
+      "name": "2021年06月18日",
+      "value": "YYYY年mm月dd日"
+    },
+    {
+      "name": "11:20:56",
+      "value": "HH:MM:SS"
+    },
+    {
+      "name": "11点21分01秒",
+      "value": "HH点MM分SS秒"
+    },
+    {
+      "name": "2021-06-18 09:22:51",
+      "value": "YYYY-mm-dd HH:MM:SS"
+    },
+    {
+      "name": "2021年06月18日 11点21分18秒",
+      "value": "YYYY年mm月dd日 HH点MM分SS秒"
+    },
+    {
+      "name": "2021-06-18 11:21:25 周五",
+      "value": "YYYY-mm-dd HH:MM:SS WW"
+    },
+    {
+      "name": "2021年06月18日 11点21分31秒 周五",
+      "value": "YYYY年mm月dd日 HH点MM分SS秒 WW"
+    },
+    {
+      "name": "2021-06-18 11:21:37 星期五",
+      "value": "YYYY-mm-dd HH:MM:SS WWW"
+    },
+    {
+      "name": "2021年06月18日 11点21分54秒 星期五",
+      "value": "YYYY年mm月dd日 HH点MM分SS秒 WWW"
+    }
+  ],
+  "fontStyle": [
+    {
+      "name": "普通",
+      "value": "normal"
+    },
+    {
+      "name": "粗体",
+      "value": "bold"
+    },
+    {
+      "name": "斜体",
+      "value": "italic"
+    }
+  ],
+  "hardwareSelectItems": {
+    "selectId": "xm",
+    "selectName": "项目",
+    "initFunction": "getXm",
+    "changeFunction": "getSb",
+    "jump": "",
+    "valueFlag": false,
+    "child": {
+      "selectId": "sb",
+      "selectName": "设备",
+      "changeFunction": "getCgq",
+      "jump": "",
+      "valueFlag": false,
+      "child": {
+        "selectId": "cgq",
+        "selectName": "数据点",
+        "changeFunction": "",
+        "jump": "",
+        "valueFlag": true
+      }
+    }
+  },
+  "serviceIpPort": "",
+  "webSocketUrl": "/websocket/message",
+  "mqttUrl": "",
+  "mqttUser": "",
+  "mqttPawss": ""
+}
