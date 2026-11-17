@@ -36,6 +36,6 @@ onBeforeUnmount(() => { revision += 1; playback?.destroy() })
 </template>
 
 <style scoped>
-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #14212c; }
-.empty-media { display: grid; place-content: center; height: 100%; background: #eaf1f7; }
+video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--ui-workspace); }
+.empty-media { display: grid; place-content: center; height: 100%; background: var(--ui-surface); }
 </style>

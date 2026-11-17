@@ -25,6 +25,7 @@ function draw() {
     const source = props.historical
     const type = props.attrs.moduleType.includes('BAR') ? 'bar' : 'line'
     chart.setOption({
+      backgroundColor: 'transparent',
       grid: { left: 45, right: 15, top: 27, bottom: 27 },
       tooltip: { trigger: 'axis' }, legend: source.legend,
       xAxis: source.xAxis || { type: 'category', data: [] }, yAxis: source.yAxis || { type: 'value' },
@@ -37,7 +38,8 @@ function draw() {
   }
 }
 onMounted(() => {
-  chart = echarts.init(host.value)
+  // 历史报表随界面走暗色，组态图表继续使用画面里的配置。
+  chart = echarts.init(host.value, props.historical ? 'dark' : undefined)
   resize = new ResizeObserver(() => chart.resize())
   resize.observe(host.value)
   draw()

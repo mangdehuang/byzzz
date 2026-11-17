@@ -121,5 +121,5 @@ function embed(item) {
 .scene-input { height: 100%; }
 .scene-input :deep(.el-input__wrapper) { height: 100%; background: transparent; box-shadow: none; padding: 0 var(--viewer-input-padding, 10px); }
 .scene-input :deep(.el-input__inner) { height: 100%; color: var(--viewer-input-color); font-family: var(--viewer-input-family); font-size: var(--viewer-input-font, 18px); text-align: var(--viewer-input-align, center); }
-.widget-placeholder { display: grid; place-content: center; background: #e4eff8dc; height: 100%; border: 1px dashed #90b0c9; font-size: var(--ui-font-body); }
+.widget-placeholder { display: grid; place-content: center; background: var(--ui-surface-raised); height: 100%; border: 1px dashed var(--ui-control-border); font-size: var(--ui-font-body); }
 </style>

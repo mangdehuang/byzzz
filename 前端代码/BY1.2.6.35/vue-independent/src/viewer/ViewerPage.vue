@@ -397,9 +397,9 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped lang="less">
-.viewer { position: relative; width: 100%; height: 100%; overflow: hidden; background: #f0f3f7; }
+.viewer { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--ui-workspace); }
 // 桌面操作条统一 14px/32px；窄屏将数据输入放到独立一行，避免挤压文字。
-.viewer-tools { position: absolute; z-index: 5; top: var(--ui-space-3); left: var(--ui-space-3); right: var(--ui-space-3); display: flex; align-items: center; flex-wrap: wrap; gap: var(--ui-space-2); padding: var(--ui-space-2); border: 1px solid var(--ui-border); border-radius: 8px; background: #ffffffed; box-shadow: 0 2px 8px #2638490c; pointer-events: none; }
+.viewer-tools { position: absolute; z-index: 5; top: var(--ui-space-3); left: var(--ui-space-3); right: var(--ui-space-3); display: flex; align-items: center; flex-wrap: wrap; gap: var(--ui-space-2); padding: var(--ui-space-2); border: 1px solid var(--ui-border); border-radius: 8px; background: var(--ui-surface); box-shadow: var(--ui-floating-shadow); pointer-events: none; }
 .viewer-tools > * { pointer-events: auto; }
 .viewer-tools .el-button + .el-button { margin-left: 0; }
 .preview-tools { align-items: flex-start; }
@@ -411,15 +411,14 @@ onBeforeUnmount(() => {
   .preview-tools :deep(.el-textarea) { order: 1; flex: 1 0 100%; width: 100%; }
   .preview-tools > .el-button--primary { margin-left: auto; }
 }
-.stage { position: absolute; inset: 0 auto auto 0; transform-origin: 0 0; touch-action: none; outline: 1px solid rgba(151, 206, 222, 1); }
+.stage { position: absolute; inset: 0 auto auto 0; transform-origin: 0 0; touch-action: none; outline: 1px solid var(--ui-control-border); }
 .viewer-loading { position: absolute; top: 30%; left: 15%; width: 70%; }
 .viewer-empty { position: absolute; inset: 20% 0 auto; }
-.viewer-menu, .viewer-hover { position: fixed; z-index: 7; padding: var(--ui-space-2); margin: 0; background: #fff; border: 1px solid #dce4ed; box-shadow: 0 4px 11px #21314130; }
+.viewer-menu, .viewer-hover { position: fixed; z-index: 7; padding: var(--ui-space-2); margin: 0; background: var(--ui-surface-raised); border: 1px solid var(--ui-border); border-radius: var(--ui-radius); box-shadow: var(--ui-floating-shadow); }
 .viewer-menu { max-width: 100vw; max-height: 100vh; overflow: auto; min-width: 150px; }
 .viewer-menu .el-button { display: block; width: 100%; margin: 0; }
 .viewer-hover { max-width: min(360px, 100vw); max-height: 100vh; overflow: auto; overflow-wrap: anywhere; font-size: 14px; pointer-events: none; display: grid; grid-template-columns: auto auto; gap: var(--ui-space-2) var(--ui-space-3); }
-.viewer-hover { background: #000; color: #fff; border-color: #fff; }
-.viewer-hover dt { color: #00ff00; }
-.viewer-hover dd { margin: 0; font-weight: 600; }
+.viewer-hover dt { color: var(--ui-accent); }
+.viewer-hover dd { margin: 0; }
 .viewer :deep(iframe) { width: 100%; border: 0; }
 </style>

@@ -165,18 +165,20 @@ onMounted(boot)
 </template>
 
 <style scoped lang="less">
-.asset-palette { min-height: 0; overflow: hidden; border-right: 1px solid #dce4ed; }
+.asset-palette { min-height: 0; overflow: hidden; border-right: 1px solid var(--ui-border); }
 .asset-tabs { height: 100%; }
-.asset-tabs :deep(.el-tabs__header) { margin-right: 0; background: #f5f7fa; }
+.asset-tabs :deep(.el-tabs__header) { margin-right: 0; background: var(--ui-surface-muted); }
 .asset-tabs :deep(.el-tabs__item) { height: 64px; padding: 0 4px; }
+.asset-tabs :deep(.el-tabs__item.is-active) { background: var(--el-color-primary-light-9); }
 .asset-tabs :deep(.el-tabs__content), .asset-tabs :deep(.el-tab-pane) { height: 100%; min-width: 0; }
 .asset-tabs :deep(.el-collapse-item__header) { padding: 0 var(--ui-space-2); font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
 .asset-tab { display: grid; justify-items: center; gap: 4px; font-size: 12px; }
 .asset-tab img { width: 24px; height: 24px; object-fit: contain; }
 .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: var(--ui-space-2); padding: 0 var(--ui-space-2); }
-.asset-tile { display: grid; justify-items: center; align-content: start; gap: var(--ui-space-1); background: #fff; border: 1px solid transparent; cursor: grab; min-width: 0; padding: var(--ui-space-1); font-size: var(--ui-font-caption); line-height: var(--ui-line-caption); border-radius: var(--ui-radius); }
-.asset-tile:hover { border-color: #8dc4fa; background: #f0f7ff; }
-.asset-tile img { width: 40px; height: 40px; object-fit: contain; }
+.asset-tile { display: grid; justify-items: center; align-content: start; gap: var(--ui-space-1); background: var(--ui-surface-muted); border: 1px solid var(--ui-border); cursor: grab; min-width: 0; padding: var(--ui-space-1); font-size: var(--ui-font-caption); line-height: var(--ui-line-caption); border-radius: var(--ui-radius); }
+.asset-tile:hover { border-color: var(--ui-accent); background: var(--ui-surface-hover); }
+// 缩略图保留中性衬底，以便辨认透明图片里的深色线条。
+.asset-tile img { width: 40px; height: 40px; object-fit: contain; background: var(--ui-preview-matte); border-radius: var(--ui-radius); }
 .asset-tile span { overflow-wrap: anywhere; text-align: center; }
 .asset-padded { padding: 8px; }
 .template-row { display: flex; align-items: center; gap: var(--ui-space-2); padding: var(--ui-space-2) 0; }

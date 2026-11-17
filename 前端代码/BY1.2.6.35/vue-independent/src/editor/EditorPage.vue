@@ -352,7 +352,7 @@ onBeforeUnmount(() => {
       <ElEmpty v-else-if="!imageGroups.length" description="暂无图片" />
       <ElScrollbar v-else max-height="60vh">
         <section v-for="(category, index) in imageGroups" :key="index">
-          <h3>{{ category.groupName }}</h3>
+          <h3 class="image-category-title">{{ category.groupName }}</h3>
           <button v-for="(item, itemIndex) in category.moduleItem" :key="itemIndex" class="image-option" type="button" @click="selectImage(item)">
             <img loading="lazy" :src="assetURL(item.iconBase64)" :alt="item.moduleName">
           </button>
@@ -378,18 +378,28 @@ onBeforeUnmount(() => {
 .no-assets { grid-template-columns: minmax(0,1fr) 320px; }
 .no-inspector { grid-template-columns: 280px minmax(0,1fr); }
 .no-assets.no-inspector { grid-template-columns: minmax(0,1fr); }
-.viewport { min-width: 0; overflow: auto; padding: 0 var(--ui-space-4) var(--ui-space-4); background: #eef1f7; }
+.viewport {
+  min-width: 0;
+  overflow: auto;
+  padding: 0 var(--ui-space-4) var(--ui-space-4);
+  // 点阵仅绘制在画布外围的工作区底色上。
+  background-color: var(--ui-workspace);
+  background-image: radial-gradient(var(--ui-border) 0.7px, transparent 0.7px);
+  background-size: 16px 16px;
+}
 .viewport-controls { position: sticky; z-index: 1; top: 0; left: 0; display: flex; justify-content: space-between; padding: var(--ui-space-2) 0; gap: var(--ui-space-2); flex-wrap: wrap; }
-.surface { position: relative; margin: var(--ui-space-2) auto; border: 1px solid #97bcd3; flex: none; }
+.surface { position: relative; margin: var(--ui-space-2) auto; border: 1px solid var(--ui-control-border); box-shadow: var(--ui-floating-shadow); flex: none; }
 .canvas-content { position: absolute; inset: 0; transform-origin: 0 0; }
-.inspector { min-width: 0; border-left: 1px solid #dce4ed; min-height: 0; overflow: hidden; }
+.inspector { min-width: 0; border-left: 1px solid var(--ui-border); min-height: 0; overflow: hidden; }
 .inspector :deep(.el-tabs) { display: flex; flex-direction: column; height: 100%; }
-.inspector :deep(.el-tabs__header) { margin: 0; padding-inline: var(--ui-space-3); }
+.inspector :deep(.el-tabs__header) { margin: 0; padding-inline: var(--ui-space-3); background: var(--ui-surface-muted); }
 .inspector :deep(.el-tabs__content) { flex: 1; min-height: 0; }
 .inspector :deep(.el-tab-pane) { height: 100%; }
-.context { position: fixed; z-index: 12; padding: 3px; background: #fff; border: 1px solid #dce4ed; box-shadow: 0 5px 12px #162c421b; }
+.context { position: fixed; z-index: 12; padding: 3px; background: var(--ui-surface-raised); border: 1px solid var(--ui-border); border-radius: var(--ui-radius); box-shadow: var(--ui-floating-shadow); }
 .context .el-button { display: block; width: 100%; margin: 0; }
-.image-option { width: 58px; height: 54px; background: #fff; border: 1px solid #e0e8ef; border-radius: 3px; margin: 3px; cursor: pointer; }
+.image-category-title { font-weight: var(--ui-font-weight); }
+.image-option { width: 58px; height: 54px; background: var(--ui-preview-matte); border: 1px solid var(--ui-border); border-radius: var(--ui-radius); margin: 3px; cursor: pointer; }
+.image-option:hover { border-color: var(--ui-accent); }
 .image-option img { width: 100%; height: 100%; object-fit: contain; }
 .key-help { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ui-space-2); }
 .key-help dd { margin: 0; }

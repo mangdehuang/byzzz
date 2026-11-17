@@ -86,7 +86,7 @@ onBeforeUnmount(() => { clearInterval(refresh); request?.abort() })
 </template>
 
 <style scoped>
-.history { width: 100%; height: 100%; overflow: auto; background: #fff; }
+.history { width: 100%; height: 100%; overflow: auto; background: var(--ui-surface); }
 .history-form { display: flex; padding: 4px; gap: 5px; }
-.alarm-message { padding: 7px; overflow-wrap: anywhere; color: #a54610; }
+.alarm-message { padding: 7px; overflow-wrap: anywhere; color: var(--el-color-warning); }
 </style>

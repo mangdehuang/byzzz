@@ -1,6 +1,7 @@
 // 工作台显示规范：仅定义应用控件，画布图元继续读取画面 JSON 中的用户样式。
 :root {
   --ui-font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ui-font-weight: 400;
   --ui-font-caption: 12px;
   --ui-font-body: 14px;
   --ui-font-section: 16px;
@@ -14,15 +15,10 @@
   --ui-space-6: 24px;
   --ui-control-height: 32px;
   --ui-radius: 4px;
-  --ui-text: #263849;
-  --ui-text-secondary: #5b6b7c;
-  --ui-border: #dce4ed;
-  --ui-surface: #fff;
-  --ui-surface-muted: #f5f7fa;
-  --ui-focus: #2476c8;
 
   // Element Plus 统一映射，含 small 控件；通过变量保持原组件焦点与禁用状态。
   --el-font-family: var(--ui-font-family);
+  --el-font-weight-primary: var(--ui-font-weight);
   --el-font-size-extra-small: var(--ui-font-caption);
   --el-font-size-small: var(--ui-font-body);
   --el-font-size-base: var(--ui-font-body);
@@ -31,15 +27,86 @@
   --el-component-size-small: var(--ui-control-height);
   --el-component-size: var(--ui-control-height);
   --el-border-radius-base: var(--ui-radius);
-  --el-text-color-primary: var(--ui-text);
-  --el-text-color-regular: var(--ui-text-secondary);
-  --el-border-color: var(--ui-border);
 }
 
-body { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
+// 工作区、工具栏和弹层逐级提亮，让长期使用的密集界面保持层次。
+html.dark {
+  --ui-workspace: #0e161d;
+  --ui-surface-muted: #131d25;
+  --ui-surface: #19242d;
+  --ui-surface-raised: #222f39;
+  --ui-surface-hover: #283943;
+  --ui-text: #e5eef3;
+  --ui-text-secondary: #a4b7c3;
+  --ui-border: #32434f;
+  --ui-control-border: #526674;
+  --ui-accent: #67dcc6;
+  --ui-accent-ink: #102923;
+  --ui-accent-hover: #93ebda;
+  --ui-focus: var(--ui-accent);
+  --ui-scroll-thumb: #526674;
+  --ui-floating-shadow: 0 12px 30px #070d13a8, 0 2px 6px #070d1380;
+  --ui-preview-matte: #e2e8eb;
+
+  --el-bg-color-page: var(--ui-workspace);
+  --el-bg-color: var(--ui-surface);
+  --el-bg-color-overlay: var(--ui-surface-raised);
+  --el-text-color-primary: var(--ui-text);
+  --el-text-color-regular: #cbd7df;
+  --el-text-color-secondary: var(--ui-text-secondary);
+  --el-text-color-placeholder: #91a5b2;
+  --el-text-color-disabled: #708491;
+  --el-border-color-darker: #647b89;
+  --el-border-color-dark: #607685;
+  --el-border-color: var(--ui-control-border);
+  --el-border-color-light: var(--ui-border);
+  --el-border-color-lighter: #2b3b47;
+  --el-border-color-extra-light: #25343f;
+  --el-fill-color-blank: var(--ui-surface-muted);
+  --el-fill-color-extra-light: #1b2832;
+  --el-fill-color-lighter: #1e2c36;
+  --el-fill-color-light: var(--ui-surface-hover);
+  --el-fill-color: #2c3d49;
+  --el-fill-color-dark: #344955;
+  --el-fill-color-darker: #3b5260;
+  --el-color-primary: var(--ui-accent);
+  --el-color-primary-light-3: #397f75;
+  --el-color-primary-light-5: #30665e;
+  --el-color-primary-light-7: #294e49;
+  --el-color-primary-light-8: #233e3c;
+  --el-color-primary-light-9: #1c3031;
+  --el-color-primary-dark-2: #57c8b3;
+  --el-box-shadow: var(--ui-floating-shadow);
+}
+
+body { font-size: var(--ui-font-body); line-height: var(--ui-line-body); font-weight: var(--ui-font-weight); }
 
 // 弹层挂载在 body 下，因此公共控件规范在全局维护，不靠页面重复覆盖。
-.el-button { font-weight: 500; }
+.el-button--primary:not(.is-plain, .is-text, .is-link) {
+  --el-button-text-color: var(--ui-accent-ink);
+  --el-button-hover-text-color: var(--ui-accent-ink);
+  --el-button-active-text-color: var(--ui-accent-ink);
+  --el-button-hover-bg-color: var(--ui-accent-hover);
+  --el-button-hover-border-color: var(--ui-accent-hover);
+}
+.el-button--primary.is-plain {
+  --el-button-hover-text-color: var(--ui-accent-ink);
+  --el-button-active-text-color: var(--ui-accent-ink);
+}
+.el-button--primary.is-link,
+.el-button--primary.is-text {
+  --el-button-hover-text-color: var(--ui-accent-hover);
+  --el-button-active-text-color: var(--ui-accent-hover);
+}
+.el-switch { --el-switch-on-color: var(--el-color-primary-light-3); }
+.el-button:focus-visible { --el-button-outline-color: var(--ui-focus); }
+.el-popper.is-dark {
+  --el-popper-bg-color-dark: var(--ui-surface-raised);
+  color: var(--ui-text);
+  background: var(--ui-surface-raised);
+  border-color: var(--ui-border);
+}
+.el-popper.is-dark > .el-popper__arrow::before { border-color: var(--ui-border); }
 .el-button--small { --el-button-size: var(--ui-control-height); padding: 8px 12px; font-size: var(--ui-font-body); }
 .el-input--small, .el-select--small, .el-input-number--small { --el-component-size-small: var(--ui-control-height); font-size: var(--ui-font-body); }
 // 当前 Element Plus 的 small 下拉框内部仍固定 24px/12px，显式对齐公共输入框。
@@ -48,23 +115,34 @@ body { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
 .el-form-item--small { margin-bottom: var(--ui-space-4); }
 .el-form-item--small .el-form-item__label { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
 .el-form--label-top .el-form-item__label { margin-bottom: var(--ui-space-2); }
-.el-tabs__item { font-size: var(--ui-font-body); }
+.el-tabs__item { font-size: var(--ui-font-body); font-weight: var(--ui-font-weight); }
 .el-table--small { font-size: var(--ui-font-body); }
 .el-table--small .el-table__cell { padding-block: var(--ui-space-2); }
-.el-collapse-item__header { font-size: var(--ui-font-body); font-weight: 500; }
+.el-collapse-item__header { font-size: var(--ui-font-body); font-weight: var(--ui-font-weight); }
 .el-collapse-item__content { font-size: var(--ui-font-body); line-height: var(--ui-line-body); padding-bottom: var(--ui-space-4); }
-.el-dialog { --el-dialog-padding-primary: var(--ui-space-6); max-width: calc(100vw - 32px); border-radius: 8px; }
-.el-dialog__title { font-size: var(--ui-font-title); line-height: 28px; font-weight: 600; }
+.el-dialog {
+  --el-dialog-padding-primary: var(--ui-space-6);
+  --el-dialog-bg-color: var(--ui-surface-raised);
+  max-width: calc(100vw - 32px);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px var(--ui-border), var(--ui-floating-shadow);
+}
+.el-message-box { background: var(--ui-surface-raised); border: 1px solid var(--ui-border); }
+.el-dialog__title { font-size: var(--ui-font-title); line-height: 28px; }
 .el-dialog__body { max-height: 70dvh; overflow: auto; font-size: var(--ui-font-body); }
 .el-dialog__footer { padding-top: var(--ui-space-4); }
+.el-table thead th,
+.el-select-dropdown__item.is-selected,
+.el-pagination .el-pager li.is-active,
+.el-switch__label { font-weight: var(--ui-font-weight); }
 .el-empty__description p { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
 .el-message { max-width: calc(100vw - 32px); }
 .el-message__content { font-size: var(--ui-font-body); line-height: var(--ui-line-body); }
 
 // 长列表只在所属面板滚动，浏览器和 Element Plus 滚动条保持相近的视觉密度。
-* { scrollbar-width: thin; scrollbar-color: #aab8c7 transparent; }
+* { scrollbar-width: thin; scrollbar-color: var(--ui-scroll-thumb) transparent; }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-thumb { border-radius: 4px; background: #aab8c7; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb { border-radius: 4px; background: var(--ui-scroll-thumb); border: 2px solid transparent; background-clip: padding-box; }
 ::-webkit-scrollbar-track { background: transparent; }
 button:focus-visible { outline: 2px solid var(--ui-focus); outline-offset: 2px; }
 

@@ -72,6 +72,6 @@ onBeforeUnmount(stop)
 </template>
 
 <style scoped>
-.camera { width: 100%; height: 100%; position: relative; background: #eaf1f7; }
+.camera { width: 100%; height: 100%; position: relative; background: var(--ui-surface); }
 .camera-host, .camera-state { position: absolute; inset: 0; }
 </style>

@@ -77,6 +77,6 @@ watch(() => props.group, refresh)
 
 <style scoped>
 .images { display: grid; grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); gap: 10px; margin-top: 12px; max-height: 460px; overflow: auto; }
-.images > div { display: grid; justify-items: center; border: 1px solid #e1e7ef; border-radius: 4px; padding: 5px; }
+.images > div { display: grid; justify-items: center; border: 1px solid var(--ui-border); border-radius: var(--ui-radius); padding: 5px; }
 .images img { width: 90px; height: 72px; object-fit: contain; }
 </style>
